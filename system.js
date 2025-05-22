@@ -8,7 +8,7 @@
         clientIdentifierHeaderName: 'X-GGLCT-Client-Request',
         clientIdentifierHeaderValue: 'GGLCT-PowerScript-Client/1.0',
         nonceHeaderName: 'X-GGLCT-Nonce',
-        sharedSecretKeyForVerification: 'ChangeThisToYourVeryStrongAndUniqueSecretKey_GGLCT_2025_XYZ',
+        sharedSecretKeyForVerification: 'zFI4 Iihv 0DvJ OHIf vX7F lLzI',
         checkInterval: 30000,
         maxRetries: 3,
         retryDelay: 5000,
