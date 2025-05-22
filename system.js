@@ -5,7 +5,7 @@
 (function(window, document) {
     'use strict';
 
-    const GGLCT_SYSTEM_CONFIG = {        securityServiceUrl: 'https://gglct.ir/app/security.php', // آدرس سرویس امنیتی شما
+    const GGLCT_SYSTEM_CONFIG = {        securityServiceUrl: 'https://gglguard.ir/app/security.php', // آدرس سرویس امنیتی شما
         adPlaceholderSelector: '#gglct-ad-placeholder', // شناسه یا سلکتور المانی که تبلیغات در آن قرار می‌گیرد
         clientIdentifierHeaderName: 'X-GGLCT-Client-Request',
         clientIdentifierHeaderValue: 'GGLCT-PowerScript-Client/1.0', // باید با security.php مچ باشد
