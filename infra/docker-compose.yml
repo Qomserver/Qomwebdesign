@@ -1,0 +1,46 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: app
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: app
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+  api:
+    build:
+      context: ../
+      dockerfile: app/Dockerfile
+    env_file:
+      - ../.env
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_ALGORITHM: ${JWT_ALGORITHM}
+      ACCESS_TOKEN_EXPIRE_MINUTES: ${ACCESS_TOKEN_EXPIRE_MINUTES}
+      REFRESH_TOKEN_EXPIRE_DAYS: ${REFRESH_TOKEN_EXPIRE_DAYS}
+      CORS_ORIGINS: ${CORS_ORIGINS}
+      APP_NAME: ${APP_NAME}
+      ENV: ${ENV}
+      ROOT_PATH: ${ROOT_PATH}
+      METRICS_ENABLED: ${METRICS_ENABLED}
+      RATE_LIMIT: ${RATE_LIMIT}
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - '8000:8000'
+    restart: unless-stopped
+
+volumes:
+  db-data:
