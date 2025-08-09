@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
+راه‌اندازی پروژه Next.js
+معرفی پروژه
+این یک پروژه Next.js است که با ابزار create-next-app راه‌اندازی شده است.
+شروع به کار
+اجرای سرور توسعه
+ابتدا سرور توسعه را با دستور زیر اجرا کنید:
 npm run dev
-# or
+# یا
 yarn dev
-# or
+# یا
 pnpm dev
-# or
+# یا
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+سپس در مرورگر خود به آدرس http://localhost:3000 مراجعه کنید تا نتیجه را مشاهده نمایید.
+ویرایش صفحات
+می‌توانید صفحه اصلی را با ویرایش فایل app/page.tsx تغییر دهید. صفحه به صورت خودکار پس از هر تغییر به‌روزرسانی می‌شود.
+بهینه‌سازی فونت
+این پروژه از next/font برای بهینه‌سازی و بارگذاری خودکار فونت Geist (فونت جدید و اختصاصی Vercel) استفاده می‌کند.
+منابع آموزشی Next.js
+برای یادگیری بیشتر درباره Next.js، می‌توانید از منابع زیر استفاده کنید:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+مستندات Next.js - آموزش ویژگی‌ها و APIهای Next.js
+آموزش تعاملی Next.js - دوره آموزشی عملی Next.js
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+همچنین می‌توانید به مخزن GitHub Next.js مراجعه کنید - نظرات و مشارکت‌های شما مورد استقبال است!
+استقرار روی Vercel
+ساده‌ترین روش برای استقرار برنامه Next.js شما، استفاده از پلتفرم Vercel است که توسط سازندگان Next.js ارائه شده است.
+برای اطلاعات بیشتر می‌توانید مستندات استقرار Next.js را مطالعه کنید.
+نکات فنی
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+این پروژه از معماری App Router جدید Next.js استفاده می‌کند
+پشتیبانی از آخرین ویژگی‌های React Server Components
+بهینه‌سازی خودکار برای تولید و توسعه
+پیکربندی پیشرفته برای مدیریت فونت‌ها و منابع استاتیک
