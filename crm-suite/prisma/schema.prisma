@@ -106,6 +106,7 @@ model Lead {
   orders            Order[]
   messages          Message[]
   tasks             Task[]
+  targetGroups      TargetGroup[]
   isConverted       Boolean          @default(false)
   convertedAt       DateTime?
 }
@@ -338,4 +339,20 @@ model Task {
   creator     User     @relation("TaskCreator", fields: [creatorId], references: [id])
   assignee    User     @relation("TaskAssignee", fields: [assigneeId], references: [id])
   lead        Lead?    @relation(fields: [leadId], references: [id])
+}
+
+model TargetGroup {
+  id        String  @id @default(cuid())
+  createdAt DateTime @default(now())
+  name      String  @unique
+  description String?
+  leads     Lead[]
+}
+
+model AppSetting {
+  id                         String   @id @default("main")
+  createdAt                  DateTime @default(now())
+  updatedAt                  DateTime @updatedAt
+  primaryLeadFieldKey        String   @default("phone")
+  leadAssignmentExpiryHours  Int?
 }
