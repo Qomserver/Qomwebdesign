@@ -1,0 +1,16 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.db
+.env
+.env.*
+.venv
+venv
+.git
+.gitignore
+Dockerfile
+**/__pycache__
+**/*.py[cod]
+**/*.log
+alembic/versions/*.pyc
