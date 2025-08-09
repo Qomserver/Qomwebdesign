@@ -10,6 +10,9 @@ export async function middleware(request: NextRequest) {
     const response = NextResponse.next();
     response.headers.set("Content-Language", "fa-IR");
     response.headers.set("Direction", "rtl");
+    response.headers.set("X-Frame-Options", "DENY");
+    response.headers.set("X-Content-Type-Options", "nosniff");
+    response.headers.set("Referrer-Policy", "no-referrer");
     return response;
   }
 
@@ -26,6 +29,9 @@ export async function middleware(request: NextRequest) {
     const response = NextResponse.next();
     response.headers.set("Content-Language", "fa-IR");
     response.headers.set("Direction", "rtl");
+    response.headers.set("X-Frame-Options", "DENY");
+    response.headers.set("X-Content-Type-Options", "nosniff");
+    response.headers.set("Referrer-Policy", "no-referrer");
     return response;
   } catch {
     const url = new URL("/login", request.url);
