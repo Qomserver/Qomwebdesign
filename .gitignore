@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.build/
+dist/
+build/
+
+# Environments
+.venv/
+venv/
+.env
+.env.*
+.python-version
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+
+# Docker
+*.log
+cache/
+.docker/
+
+# Alembic
+app/src/alembic/versions/__pycache__/
+
+# SQLite
+*.sqlite3
+
+# Misc
+*.bak
